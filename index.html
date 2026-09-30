@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emin Jordamović · AI Filmmaker</title>
+    <meta
+      name="description"
+      content="Emin Jordamović, AI Filmmaker. I make videos with AI, and I build the systems that make them fast and consistent."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="media/poster-1.webp" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <div class="bg" aria-hidden="true">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="blob b3"></span>
+      <span class="blob b4"></span>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <h1 class="hero-name">Emin Jordamović</h1>
+      <p class="slot" id="slot">
+        <span class="sr-only">AI Filmmaker</span>
+        <span class="slot-window" aria-hidden="true">
+          <span class="slot-reel" id="slot-reel"></span>
+        </span>
+      </p>
+      <p class="hero-line">I make videos with AI, and I build the systems that make them fast and consistent.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#work">
+          Watch my work
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+        </a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ MY WORK (carousel) ============ -->
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="title-wrap">
+          <h2 class="title" id="work-title" aria-label="Emin's Library">
+            <span class="word" data-text="Emin's"></span>
+            <span class="word lib" data-text="Library"></span>
+          </h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+
+        <div class="carousel" aria-roledescription="carousel">
+          <button class="arrow prev" aria-label="Previous video">
+            <svg viewBox="0 0 24 24"><path d="M15 5 8 12l7 7" /></svg>
+          </button>
+          <div class="stage" id="stage"></div>
+          <button class="arrow next" aria-label="Next video">
+            <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+
+        <div class="vlabel-wrap" id="vlabel" aria-live="polite"></div>
+        <nav class="dots" id="dots" aria-label="Choose video"></nav>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section" id="about" style="--accent: var(--mint)">
+        <div class="section-head" data-reveal>
+          <h2>About me</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <div class="panel about" data-reveal>
+          <p>
+            I'm a fourth-year software engineering student and an AI content creator. I make videos fully with AI,
+            from script and voice to visuals, animation, and sound, and I use my engineering background to automate
+            the repetitive parts. I've spent years on short-form platforms, so I know what makes people stop
+            scrolling and keep watching.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ NUMBERS ============ -->
+      <section class="section" id="numbers" style="--accent: var(--sun)">
+        <div class="section-head" data-reveal>
+          <h2>By the numbers</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <div class="stats">
+          <div class="stat" data-reveal style="--accent: var(--coral); --d: 0">
+            <p class="stat-num" data-count="75" data-suffix="K">75K</p>
+            <p class="stat-label">followers on TikTok</p>
+          </div>
+          <div class="stat" data-reveal style="--accent: var(--lilac); --d: 1">
+            <p class="stat-num" data-count="21" data-suffix="K">21K</p>
+            <p class="stat-label">followers on Instagram</p>
+          </div>
+          <div class="stat" data-reveal style="--accent: var(--sky); --d: 2">
+            <p class="stat-num" data-count="5.6" data-decimals="1" data-suffix="M+">5.6M+</p>
+            <p class="stat-label">views from 30 sponsored videos in one month</p>
+          </div>
+          <div class="stat" data-reveal style="--accent: var(--mint); --d: 3">
+            <p class="stat-num" data-count="1" data-suffix="+ year">1+ year</p>
+            <p class="stat-label">producing AI video</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section class="section" id="experience" style="--accent: var(--coral)">
+        <div class="section-head" data-reveal>
+          <h2>Experience</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <ol class="timeline" id="timeline">
+          <li class="tl-fill" aria-hidden="true"><span></span></li>
+          <li class="tl-item" data-reveal style="--accent: var(--sun)">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="panel tl-card">
+              <p class="date">1 year</p>
+              <h3>AI Video Producer · YouTube explainer channel</h3>
+              <p>
+                Animated explainer videos made fully with AI. I built a reusable, largely automated production
+                pipeline, and characters and style stay consistent across every video.
+              </p>
+            </div>
+          </li>
+          <li class="tl-item" data-reveal style="--accent: var(--coral)">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="panel tl-card">
+              <p class="date">Past 3 years</p>
+              <h3>Content Creator &amp; Influencer · TikTok 75K / Instagram 21K</h3>
+              <p>
+                Built a food and mukbang audience through short-form vertical video, shot and edited in CapCut. Ran a
+                5–6 month sponsored partnership with an AI calorie-counting app; in the final month, 30 sponsored
+                videos reached over 5.6 million views. Also did brand deals with restaurants.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ HOW I WORK ============ -->
+      <section class="section" id="how" style="--accent: var(--sky)">
+        <div class="section-head" data-reveal>
+          <h2>How I work</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+
+        <h3 class="sub" data-reveal>Current pipeline</h3>
+        <ol class="flow" style="--flow: var(--coral); --flow-2: var(--sun)">
+          <li class="flow-track" aria-hidden="true"><span class="flow-fill"></span><span class="flow-signal"></span></li>
+          <li class="flow-step">
+            <span class="flow-node">1</span>
+            <div class="flow-card">
+              <h4>Script</h4>
+              <p>Written with AI using my own prompts and skills, tuned to the visual style.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">2</span>
+            <div class="flow-card">
+              <h4>Voice</h4>
+              <p>Full narration in ElevenLabs, directed with audio tags.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">3</span>
+            <div class="flow-card">
+              <h4>Timing</h4>
+              <p>Transcribed to word-level timestamps, so every cut and effect lands on the exact word.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">4</span>
+            <div class="flow-card">
+              <h4>Visuals</h4>
+              <p>Copyright-safe sourced images plus custom images and cutouts made in NanoBanana.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">5</span>
+            <div class="flow-card">
+              <h4>Animation</h4>
+              <p>Built in code with Remotion (React) via Claude Code, rendered in 1–1.5 minute parts.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">6</span>
+            <div class="flow-card">
+              <h4>Sound</h4>
+              <p>
+                Music and SFX placed in code on the same timestamps, with the music automatically lowered under the
+                voice and balanced loudness.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="panel setup" data-reveal style="--accent: var(--sun)">
+          <p>
+            The speed comes from the setup. Each project folder has its own rule files
+            (<code>CLAUDE.md</code>, <code>PATTERNS.md</code>, <code>CONTINUITY.md</code>) that define the style, how
+            images are made, how scenes are split, and what's already done. A new script and voice file go in, and
+            production starts immediately, looking the same in every session. Anything I do more than twice becomes a
+            rule or a reusable step.
+          </p>
+        </div>
+
+        <h3 class="sub" data-reveal>How I'd apply it to micro-dramas</h3>
+        <ol class="flow" style="--flow: var(--lilac); --flow-2: var(--sky)">
+          <li class="flow-track" aria-hidden="true"><span class="flow-fill"></span><span class="flow-signal"></span></li>
+          <li class="flow-step">
+            <span class="flow-node">1</span>
+            <div class="flow-card">
+              <h4>Style first</h4>
+              <p>Analyze reference videos, then turn the look, pacing, and lighting into written rules.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">2</span>
+            <div class="flow-card">
+              <h4>Reference assets</h4>
+              <p>
+                Character sheets for every recurring character (front, back, side, face close-up) and reference
+                images for locations, built from approved assets.
+              </p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">3</span>
+            <div class="flow-card">
+              <h4>Generation</h4>
+              <p>
+                Key frames built from the reference sheets, then animated with image-to-video, so every shot starts
+                from an approved look.
+              </p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">4</span>
+            <div class="flow-card">
+              <h4>Dialogue</h4>
+              <p>
+                Audio-first. Each character gets a fixed ElevenLabs voice, and the video model lip-syncs to that
+                audio, so the same character sounds the same in every episode. When a native-audio take has the best
+                performance, only the voice is swapped with speech-to-speech conversion, which keeps the timing and
+                lip-sync.
+              </p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">5</span>
+            <div class="flow-card">
+              <h4>Edit</h4>
+              <p>
+                9:16, music matched to mood, SFX on action and cuts, timed captions, and exports optimized for each
+                platform.
+              </p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-node">6</span>
+            <div class="flow-card">
+              <h4>3D characters (when needed)</h4>
+              <p>
+                An agentic pipeline: character concept, textured 3D model, then Blender retopology, UV mapping, and
+                rigging, a production-readiness check, and stylized animation.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="panel cinematic" data-reveal style="--accent: var(--lilac)">
+          <h3>Cinematic / realistic productions</h3>
+          <ul class="ticks">
+            <li>Script to shot list: storyboard with shot types, camera movement, and 9:16 framing before anything is generated.</li>
+            <li>Photoreal character sheets with fixed wardrobe, hair, and lighting.</li>
+            <li>A continuity file per series tracking wardrobe, props, locations, and time of day.</li>
+            <li>A consistent color grade and sound design across the series.</li>
+          </ul>
+        </div>
+
+        <p class="closing" data-reveal>
+          <strong><mark>Preparation is more than half the work.</mark></strong>
+          A strong setup is what makes daily episodes fast and keeps characters from changing faces between episodes.
+        </p>
+      </section>
+
+      <!-- ============ TOOLS ============ -->
+      <section class="section" id="tools" style="--accent: var(--lilac)">
+        <div class="section-head" data-reveal>
+          <h2>Tools</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <ul class="tools">
+          <li class="tool" data-reveal style="--accent: var(--sun); --d: 0">
+            <p class="tool-cat">AI images</p>
+            <p class="tool-name">NanoBanana</p>
+            <p class="tool-note">Character and style consistency</p>
+          </li>
+          <li class="tool" data-reveal style="--accent: var(--coral); --d: 1">
+            <p class="tool-cat">AI video</p>
+            <p class="tool-name">Seedance, Veo 3</p>
+            <p class="tool-note">Testing and experimentation</p>
+          </li>
+          <li class="tool" data-reveal style="--accent: var(--sky); --d: 2">
+            <p class="tool-cat">AI voice</p>
+            <p class="tool-name">ElevenLabs</p>
+            <p class="tool-note">Audio tags, voice cloning</p>
+          </li>
+          <li class="tool" data-reveal style="--accent: var(--lilac); --d: 3">
+            <p class="tool-cat">AI assistants</p>
+            <p class="tool-name">Claude Opus 5.5, Claude Code, GPT-6 Astra</p>
+          </li>
+          <li class="tool" data-reveal style="--accent: var(--mint); --d: 4">
+            <p class="tool-cat">Animation</p>
+            <p class="tool-name">Remotion (React)</p>
+            <p class="tool-note">Automated workflows</p>
+          </li>
+          <li class="tool" data-reveal style="--accent: var(--pink); --d: 5">
+            <p class="tool-cat">Editing</p>
+            <p class="tool-name">CapCut</p>
+            <p class="tool-note">9:16, captions, music and SFX sync</p>
+          </li>
+          <li class="tool" data-reveal style="--accent: var(--sun); --d: 6">
+            <p class="tool-cat">Social</p>
+            <p class="tool-name">Short-form strategy</p>
+            <p class="tool-note">Hooks, sponsored content, Facebook Ads</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ LEARNING TOGETHER ============ -->
+      <section class="section" id="together" style="--accent: var(--pink)">
+        <div class="section-head" data-reveal>
+          <h2>Learning together</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <div class="panel" data-reveal>
+          <p>
+            My friend Džan Mundžić and I have been exploring AI video and image generation
+            side by side from the start. We each work on our own projects, then meet up to share what we've
+            discovered, what worked, and how each of us could improve. He's applying to Foxelli too, and we'd love to
+            bring that exchange of ideas to the team together.
+          </p>
+          <p class="panel-link">
+            <a class="btn btn-small" href="https://dzan-portfolio.vercel.app/" target="_blank" rel="noopener">
+              See Džan's portfolio
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ ENGINEERING ============ -->
+      <section class="section" id="engineering" style="--accent: var(--sky)">
+        <div class="section-head" data-reveal>
+          <h2>The engineering side</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <div class="panel" data-reveal>
+          <p>
+            I'm a fourth-year Software Engineering student at the Faculty of Information Technologies, University
+            Džemal Bijedić of Mostar (expected graduation 2027). My engineering background is why I build videos with
+            code and automate everything I can.
+          </p>
+          <ul class="tags" aria-label="Programming skills">
+            <li>C++</li>
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Docker</li>
+            <li>Git</li>
+          </ul>
+          <p class="panel-link">
+            <a class="btn btn-primary btn-small" href="https://eminjordamovic.vercel.app" target="_blank" rel="noopener">
+              See my software engineering portfolio
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ APPLICATION ANSWERS ============ -->
+      <section class="section" id="answers" style="--accent: var(--coral)">
+        <div class="section-head" data-reveal>
+          <h2>Application answers</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <div class="accordion" data-reveal>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">English level<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>C1 (Advanced)</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">Comfortable working remotely<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>Yes</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">Freelance / B2B<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>Yes</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">Experience in D2C<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>About 1 year, across direct sales, running Facebook ads, and a 5–6 month sponsored campaign for a consumer app.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">How long producing AI video<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>About 1 year, since Google's Veo 3 came out in 2025.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">Established AI production workflow<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>Yes. See <a href="#how">How I work</a>.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-q" aria-expanded="false">Skill level in AI movie production<span class="acc-icon" aria-hidden="true"></span></button>
+            <div class="acc-a"><div><p>Intermediate. My pipeline, consistency system, and editing are strong; my hands-on video generation experience is growing fast.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section" id="contact" style="--accent: var(--sun)">
+        <div class="section-head" data-reveal>
+          <h2>Contact</h2>
+          <svg class="squiggle" viewBox="0 0 300 24" aria-hidden="true">
+            <path d="M4 14 Q 22 2 40 14 T 76 14 T 112 14 T 148 14 T 184 14 T 220 14 T 256 14 T 292 14" />
+          </svg>
+        </div>
+        <div class="panel contact" data-reveal>
+          <p class="contact-line">Open to AI filmmaking and short-form video roles.</p>
+          <a class="btn btn-primary contact-mail" href="mailto:empafoodie@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 6 9-6" /></svg>
+            empafoodie@gmail.com
+          </a>
+          <ul class="socials">
+            <li><a class="btn btn-small" href="https://www.tiktok.com/@empaaasmr" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a class="btn btn-small" href="https://www.instagram.com/empaasmr/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="btn btn-small" href="https://github.com/empahub" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="btn btn-small" href="https://www.linkedin.com/in/eminjordamovic" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2026 Emin Jordamović</footer>
+
+    <!-- ============ PLAYER ============ -->
+    <div class="player" id="player" aria-hidden="true">
+      <div class="player-backdrop"></div>
+      <div class="player-frame" role="dialog" aria-label="Video player">
+        <img class="player-poster" alt="" draggable="false" />
+        <video
+          class="player-video"
+          playsinline
+          preload="none"
+          disablepictureinpicture
+          disableremoteplayback
+          controlslist="nodownload nofullscreen noremoteplayback noplaybackrate"
+        ></video>
+        <div class="player-shield" aria-hidden="true">
+          <span class="player-paused">
+            <svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" /></svg>
+          </span>
+        </div>
+        <div class="player-label"></div>
+        <div class="player-bar">
+          <button class="pb-btn pb-play" aria-label="Pause">
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.4" /><rect x="13.8" y="5" width="4.2" height="14" rx="1.4" /></svg>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" /></svg>
+          </button>
+          <div class="player-vol">
+            <button class="vol-btn" aria-label="Mute">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path class="spk" d="M4 9h4l5-4v14l-5-4H4z" />
+                <path class="waves" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" />
+                <path class="cross" d="M16.5 9.5l5 5M21.5 9.5l-5 5" />
+              </svg>
+            </button>
+            <input class="vol-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume" />
+          </div>
+          <div class="seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="0:00">
+            <div class="seek-track"><span class="seek-buf"></span><span class="seek-fill"></span></div>
+            <span class="seek-thumb"></span>
+            <span class="seek-tip">0:00</span>
+          </div>
+          <span class="pb-time"><span class="t-cur">0:00</span><span class="t-sep"> / </span><span class="t-dur">0:00</span></span>
+          <button class="pb-btn pb-fs" aria-label="Full screen">
+            <svg class="i-enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4" /></svg>
+            <svg class="i-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v4a1 1 0 0 1-1 1H4M20 9h-4a1 1 0 0 1-1-1V4M15 20v-4a1 1 0 0 1 1-1h4M4 15h4a1 1 0 0 1 1 1v4" /></svg>
+          </button>
+        </div>
+        <button class="player-close" aria-label="Close video">
+          <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
