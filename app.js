@@ -7,6 +7,9 @@
   // poster  = still frame (tiny, loads instantly)
   // preview = 6s muted loop shown on the front card
   // full    = the real video, only requested when someone presses play
+  // Bump this whenever a file in media/ is replaced, so browsers fetch the new one
+  const MEDIA_V = 2;
+
   // made: "own" = my own YouTube production flow, "sd20"/"sd25" = made with Seedance 2.0 / 2.5
   const VIDEOS = [
     // ids 1 and 3 are 3-minute cuts from the start of my full YouTube videos
@@ -22,9 +25,9 @@
   ].map((v) => ({
     pos: "50% 50%",
     ...v,
-    poster: `media/poster-${v.id}.webp`,
-    preview: `media/preview-${v.id}.mp4`,
-    full: `media/full-${v.id}.mp4`,
+    poster: `media/poster-${v.id}.webp?v=${MEDIA_V}`,
+    preview: `media/preview-${v.id}.mp4?v=${MEDIA_V}`,
+    full: `media/full-${v.id}.mp4?v=${MEDIA_V}`,
   }));
 
   const ICON_FILM =
