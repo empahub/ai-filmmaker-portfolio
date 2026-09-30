@@ -7,18 +7,12 @@
   // poster  = still frame (tiny, loads instantly)
   // preview = 6s muted loop shown on the front card
   // full    = the real video, only requested when someone presses play
-  // The two long videos are too big for GitHub (100 MB file limit), so they're
-  // hosted elsewhere. Paste their public links here; while empty, the local
-  // files in media/ are used (works on localhost only).
-  const EXTERNAL_VIDEOS = {
-    1: "", // full-1.mp4 (My own YouTube production flow, 16 min)
-    3: "", // full-3.mp4 (My own YouTube production flow 2, 15 min)
-  };
-
   // made: "own" = my own YouTube production flow, "sd20"/"sd25" = made with Seedance 2.0 / 2.5
   const VIDEOS = [
-    { id: 1, made: "own", accent: "#ffc93c" },
-    { id: 3, made: "own", accent: "#4cc9f0" },
+    // ids 1 and 3 are 3-minute cuts from the start of my full YouTube videos
+    // (16 and 15 min). The full versions are too large to host with the site.
+    { id: 1, made: "own", accent: "#ffc93c" }, // "The Rise of Dario" (youtu.be/VkN3As2kgDI)
+    { id: 3, made: "own", accent: "#4cc9f0" }, // Kim Jong Un video (youtu.be/QFB5Hws8oDQ)
     { id: 2, made: "sd20", accent: "#ff6b5b", pos: "50% 45%" },
     { id: 4, made: "sd20", accent: "#ff8fb1", pos: "50% 38%" },
     { id: 5, made: "sd25", accent: "#9b8cff" },
@@ -30,7 +24,7 @@
     ...v,
     poster: `media/poster-${v.id}.webp`,
     preview: `media/preview-${v.id}.mp4`,
-    full: EXTERNAL_VIDEOS[v.id] || `media/full-${v.id}.mp4`,
+    full: `media/full-${v.id}.mp4`,
   }));
 
   const ICON_FILM =
